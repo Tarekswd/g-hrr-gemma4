@@ -1,0 +1,7 @@
+depth_config,pass_rate,loc_recall_5,tokens,nodes,lines,relevant_ratio,eff_score
+Depth 0 (Focal Symbol Only),27.0,68.0,12400,1.0,45,94.0,2.18
+Depth 1 (Direct 1-Hop AST),35.0,88.0,19240,5.4,182,82.5,1.82
+Depth 2 (Two-Hop Neighborhood),33.0,89.0,31500,18.2,540,48.0,1.05
+Depth 3 (Three-Hop Neighborhood),29.0,84.0,48200,52.8,1420,22.4,0.6
+Depth 4 (Four-Hop Neighborhood),24.0,78.0,64800,128.0,3200,9.8,0.37
+Adaptive (1-Hop + Fail-Driven 2-Hop),44.0,92.0,22610,6.8,218,86.8,1.95

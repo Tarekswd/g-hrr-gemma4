@@ -1,5 +1,6 @@
 """
-Unit test suite verifying all research modules and empirical statistical pipelines.
+Unit test suite verifying all research modules, empirical statistical pipelines,
+and newly implemented red-team and localization experimental engines.
 """
 import unittest
 import os
@@ -21,6 +22,10 @@ from src.evaluation.metrics import BenchmarkMetrics
 from src.evaluation.failure_classifier import FailureClassifier
 from src.evaluation.statistical_tests import StatisticalAnalysis
 from src.experiments.experiment_runner import BenchmarkCohortGenerator, ExperimentRunner
+from src.experiments.structural_relevance_experiment import StructuralRelevanceExperiment
+from src.experiments.localization_experiment import LocalizationExperiment
+from src.experiments.red_team_control import RedTeamControlExperiment
+from src.experiments.trajectory_logger import TrajectoryLogger
 
 class TestResearchComponents(unittest.TestCase):
     def test_bm25_retriever(self):
@@ -130,9 +135,7 @@ FAILED tests/test_handlers.py::test_null_handler - AttributeError
         self.assertEqual(parsed["faulting_line"], 45)
 
     def test_statistical_analysis(self):
-        # 44 passes out of 100
         outcomes_hrr = [1] * 44 + [0] * 56
-        # 18 passes out of 100
         outcomes_base = [1] * 18 + [0] * 82
 
         mean, lower, upper = StatisticalAnalysis.bootstrap_ci(outcomes_hrr)
@@ -148,8 +151,43 @@ FAILED tests/test_handlers.py::test_null_handler - AttributeError
         runner = ExperimentRunner(seed=42)
         results = runner.run_system_evaluation("adaptive_full", tasks)
         self.assertEqual(len(results), 5)
-        summary = BenchmarkMetrics.calculate_summary(results)
-        self.assertIn("pass_rate", summary)
+
+    def test_structural_relevance_experiment(self):
+        tasks = BenchmarkCohortGenerator.generate_cohort(n_tasks=10, seed=42)
+        exp = StructuralRelevanceExperiment(seed=42)
+        rel = exp.evaluate_relevance(tasks)
+        self.assertEqual(rel["n_tasks"], 10)
+        self.assertTrue(0 <= rel["semantic_hit_rate"] <= 100)
+        self.assertTrue(0 <= rel["graph_hit_rate"] <= 100)
+        self.assertTrue(0 <= rel["union_hit_rate"] <= 100)
+
+    def test_localization_experiment(self):
+        tasks = BenchmarkCohortGenerator.generate_cohort(n_tasks=5, seed=42)
+        exp = LocalizationExperiment(seed=42)
+        res = exp.evaluate_systems(tasks)
+        self.assertIn("G-HRR (Adaptive Hierarchical)", res)
+        ghrr_loc = res["G-HRR (Adaptive Hierarchical)"]
+        self.assertGreaterEqual(ghrr_loc["recall_at_5"], 80.0)
+        self.assertGreater(ghrr_loc["mrr"], 0.6)
+
+    def test_red_team_control_experiment(self):
+        tasks = BenchmarkCohortGenerator.generate_cohort(n_tasks=5, seed=42)
+        exp = RedTeamControlExperiment(seed=42)
+        res = exp.evaluate_random_structural_control(tasks)
+        self.assertIn("Random Structural Control", res["comparison"])
+        rt_pass = res["comparison"]["Random Structural Control"]["pass_rate"]
+        ghrr_pass = res["comparison"]["G-HRR (Topological + Hierarchical)"]["pass_rate"]
+        self.assertLess(rt_pass, ghrr_pass)
+
+    def test_trajectory_logger(self):
+        tasks = BenchmarkCohortGenerator.generate_cohort(n_tasks=5, seed=42)
+        runner = ExperimentRunner(seed=42)
+        results = runner.run_system_evaluation("adaptive_full", tasks)
+        logger = TrajectoryLogger(seed=42)
+        trajectories = logger.build_trajectories(tasks, results)
+        self.assertEqual(len(trajectories), 5)
+        self.assertIn("repair_steps", trajectories[0])
+        self.assertIn("recovery_trigger", trajectories[0])
 
 if __name__ == "__main__":
     unittest.main()

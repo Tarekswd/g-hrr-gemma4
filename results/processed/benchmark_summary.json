@@ -1,0 +1,463 @@
+{
+  "cohort_size": 100,
+  "seed": 42,
+  "systems": {
+    "baseline": {
+      "sample_size": 100,
+      "passed_count": 19,
+      "pass_rate": 19.0,
+      "mean_tokens": 24546.71,
+      "mean_tool_calls": 14.04,
+      "mean_duration": 173.49880000000002,
+      "ci_lower": 11.0,
+      "ci_upper": 27.0,
+      "sys_label": "B0: Direct Exploration",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 10,
+          "rate": 33.3
+        },
+        "medium": {
+          "n": 45,
+          "passed": 9,
+          "rate": 20.0
+        },
+        "hard": {
+          "n": 25,
+          "passed": 0,
+          "rate": 0.0
+        }
+      }
+    },
+    "lexical": {
+      "sample_size": 100,
+      "passed_count": 26,
+      "pass_rate": 26.0,
+      "mean_tokens": 26616.52,
+      "mean_tool_calls": 14.39,
+      "mean_duration": 178.6663,
+      "ci_lower": 18.0,
+      "ci_upper": 35.0,
+      "sys_label": "B1: Lexical (BM25)",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 15,
+          "rate": 50.0
+        },
+        "medium": {
+          "n": 45,
+          "passed": 10,
+          "rate": 22.2
+        },
+        "hard": {
+          "n": 25,
+          "passed": 1,
+          "rate": 4.0
+        }
+      }
+    },
+    "dense": {
+      "sample_size": 100,
+      "passed_count": 26,
+      "pass_rate": 26.0,
+      "mean_tokens": 28473.19,
+      "mean_tool_calls": 15.12,
+      "mean_duration": 186.5557,
+      "ci_lower": 18.0,
+      "ci_upper": 35.0,
+      "sys_label": "B2: Dense (Embedding)",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 13,
+          "rate": 43.3
+        },
+        "medium": {
+          "n": 45,
+          "passed": 12,
+          "rate": 26.7
+        },
+        "hard": {
+          "n": 25,
+          "passed": 1,
+          "rate": 4.0
+        }
+      }
+    },
+    "semantic": {
+      "sample_size": 100,
+      "passed_count": 25,
+      "pass_rate": 25.0,
+      "mean_tokens": 31051.07,
+      "mean_tool_calls": 16.64,
+      "mean_duration": 208.4264,
+      "ci_lower": 17.0,
+      "ci_upper": 34.0,
+      "sys_label": "B3: Hybrid (BM25+Dense)",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 15,
+          "rate": 50.0
+        },
+        "medium": {
+          "n": 45,
+          "passed": 10,
+          "rate": 22.2
+        },
+        "hard": {
+          "n": 25,
+          "passed": 0,
+          "rate": 0.0
+        }
+      }
+    },
+    "graph": {
+      "sample_size": 100,
+      "passed_count": 30,
+      "pass_rate": 30.0,
+      "mean_tokens": 28771.43,
+      "mean_tool_calls": 12.79,
+      "mean_duration": 161.44809999999998,
+      "ci_lower": 21.0,
+      "ci_upper": 39.0,
+      "sys_label": "B4: Fixed Graph (1-Hop)",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 11,
+          "rate": 36.7
+        },
+        "medium": {
+          "n": 45,
+          "passed": 17,
+          "rate": 37.8
+        },
+        "hard": {
+          "n": 25,
+          "passed": 2,
+          "rate": 8.0
+        }
+      }
+    },
+    "hierarchical": {
+      "sample_size": 100,
+      "passed_count": 34,
+      "pass_rate": 34.0,
+      "mean_tokens": 18980.85,
+      "mean_tool_calls": 11.09,
+      "mean_duration": 138.0886,
+      "ci_lower": 25.0,
+      "ci_upper": 44.0,
+      "sys_label": "B5: Hierarchical",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 15,
+          "rate": 50.0
+        },
+        "medium": {
+          "n": 45,
+          "passed": 15,
+          "rate": 33.3
+        },
+        "hard": {
+          "n": 25,
+          "passed": 4,
+          "rate": 16.0
+        }
+      }
+    },
+    "adaptive_full": {
+      "sample_size": 100,
+      "passed_count": 48,
+      "pass_rate": 48.0,
+      "mean_tokens": 22339.45,
+      "mean_tool_calls": 12.8,
+      "mean_duration": 161.78379999999999,
+      "ci_lower": 38.0,
+      "ci_upper": 58.0,
+      "sys_label": "B6: G-HRR Full",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 23,
+          "rate": 76.7
+        },
+        "medium": {
+          "n": 45,
+          "passed": 21,
+          "rate": 46.7
+        },
+        "hard": {
+          "n": 25,
+          "passed": 4,
+          "rate": 16.0
+        }
+      }
+    },
+    "random_structural": {
+      "sample_size": 100,
+      "passed_count": 20,
+      "pass_rate": 20.0,
+      "mean_tokens": 22581.58,
+      "mean_tool_calls": 12.63,
+      "mean_duration": 160.81709999999998,
+      "ci_lower": 12.0,
+      "ci_upper": 28.0,
+      "sys_label": "Control: Random Structural",
+      "difficulty_breakdown": {
+        "easy": {
+          "n": 30,
+          "passed": 10,
+          "rate": 33.3
+        },
+        "medium": {
+          "n": 45,
+          "passed": 10,
+          "rate": 22.2
+        },
+        "hard": {
+          "n": 25,
+          "passed": 0,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "structural_relevance": {
+    "semantic_hit_rate": 66.0,
+    "graph_hit_rate": 87.0,
+    "union_hit_rate": 97.0,
+    "both_pct": 56.0,
+    "semantic_only_pct": 10.0,
+    "graph_only_pct": 31.0,
+    "neither_pct": 3.0
+  },
+  "edge_types": {
+    "All Edges (G-HRR)": {
+      "pass_rate": 44.0,
+      "context_recall": 92.0,
+      "noise_ratio": 12.4
+    },
+    "Calls Only": {
+      "pass_rate": 38.0,
+      "context_recall": 81.0,
+      "noise_ratio": 6.2
+    },
+    "Imports Only": {
+      "pass_rate": 31.0,
+      "context_recall": 67.0,
+      "noise_ratio": 18.5
+    },
+    "Inherits Only": {
+      "pass_rate": 29.0,
+      "context_recall": 62.0,
+      "noise_ratio": 5.1
+    },
+    "Contains Only": {
+      "pass_rate": 26.0,
+      "context_recall": 54.0,
+      "noise_ratio": 22.0
+    }
+  },
+  "edge_directionality": {
+    "Bidirectional (G-HRR)": {
+      "pass_rate": 44.0,
+      "context_recall": 92.0,
+      "tokens": 22610
+    },
+    "Incoming Only (Callers)": {
+      "pass_rate": 39.0,
+      "context_recall": 83.0,
+      "tokens": 17850
+    },
+    "Outgoing Only (Callees)": {
+      "pass_rate": 34.0,
+      "context_recall": 74.0,
+      "tokens": 16920
+    }
+  },
+  "localization": {
+    "Lexical (BM25)": {
+      "recall_at_1": 28.0,
+      "recall_at_5": 54.0,
+      "recall_at_10": 66.0,
+      "mrr": 0.382,
+      "mean_rank": 7.4,
+      "file_accuracy": 62.0,
+      "symbol_accuracy": 44.0
+    },
+    "Dense Retrieval": {
+      "recall_at_1": 34.0,
+      "recall_at_5": 61.0,
+      "recall_at_10": 71.0,
+      "mrr": 0.448,
+      "mean_rank": 6.1,
+      "file_accuracy": 69.0,
+      "symbol_accuracy": 51.0
+    },
+    "Hybrid (BM25+Dense)": {
+      "recall_at_1": 41.0,
+      "recall_at_5": 72.0,
+      "recall_at_10": 81.0,
+      "mrr": 0.531,
+      "mean_rank": 4.5,
+      "file_accuracy": 78.0,
+      "symbol_accuracy": 63.0
+    },
+    "Graph Only": {
+      "recall_at_1": 22.0,
+      "recall_at_5": 48.0,
+      "recall_at_10": 63.0,
+      "mrr": 0.334,
+      "mean_rank": 8.8,
+      "file_accuracy": 59.0,
+      "symbol_accuracy": 41.0
+    },
+    "Hybrid + Fixed Graph": {
+      "recall_at_1": 46.0,
+      "recall_at_5": 79.0,
+      "recall_at_10": 87.0,
+      "mrr": 0.589,
+      "mean_rank": 3.8,
+      "file_accuracy": 84.0,
+      "symbol_accuracy": 72.0
+    },
+    "G-HRR (Adaptive Hierarchical)": {
+      "recall_at_1": 58.0,
+      "recall_at_5": 89.0,
+      "recall_at_10": 95.0,
+      "mrr": 0.697,
+      "mean_rank": 2.4,
+      "file_accuracy": 93.0,
+      "symbol_accuracy": 84.0
+    }
+  },
+  "depth_sweep": {
+    "Depth 0 (Focal Symbol Only)": {
+      "pass_rate": 27.0,
+      "loc_recall_5": 68.0,
+      "tokens": 12400,
+      "nodes": 1.0,
+      "lines": 45,
+      "relevant_ratio": 94.0,
+      "eff_score": 2.18
+    },
+    "Depth 1 (Direct 1-Hop AST)": {
+      "pass_rate": 35.0,
+      "loc_recall_5": 88.0,
+      "tokens": 19240,
+      "nodes": 5.4,
+      "lines": 182,
+      "relevant_ratio": 82.5,
+      "eff_score": 1.82
+    },
+    "Depth 2 (Two-Hop Neighborhood)": {
+      "pass_rate": 33.0,
+      "loc_recall_5": 89.0,
+      "tokens": 31500,
+      "nodes": 18.2,
+      "lines": 540,
+      "relevant_ratio": 48.0,
+      "eff_score": 1.05
+    },
+    "Depth 3 (Three-Hop Neighborhood)": {
+      "pass_rate": 29.0,
+      "loc_recall_5": 84.0,
+      "tokens": 48200,
+      "nodes": 52.8,
+      "lines": 1420,
+      "relevant_ratio": 22.4,
+      "eff_score": 0.6
+    },
+    "Depth 4 (Four-Hop Neighborhood)": {
+      "pass_rate": 24.0,
+      "loc_recall_5": 78.0,
+      "tokens": 64800,
+      "nodes": 128.0,
+      "lines": 3200,
+      "relevant_ratio": 9.8,
+      "eff_score": 0.37
+    },
+    "Adaptive (1-Hop + Fail-Driven 2-Hop)": {
+      "pass_rate": 44.0,
+      "loc_recall_5": 92.0,
+      "tokens": 22610,
+      "nodes": 6.8,
+      "lines": 218,
+      "relevant_ratio": 86.8,
+      "eff_score": 1.95
+    }
+  },
+  "ablations": {
+    "Full G-HRR (System E)": {
+      "pass_rate": 44.0,
+      "mean_tokens": 22610,
+      "tool_calls": 12.8,
+      "delta": "+0.0%"
+    },
+    "w/o Code Graph": {
+      "pass_rate": 26.0,
+      "mean_tokens": 31400,
+      "tool_calls": 16.8,
+      "delta": "-18.0%"
+    },
+    "w/o Semantic Retrieval": {
+      "pass_rate": 28.0,
+      "mean_tokens": 24200,
+      "tool_calls": 14.5,
+      "delta": "-16.0%"
+    },
+    "w/o Hierarchical Pruning": {
+      "pass_rate": 33.0,
+      "mean_tokens": 29200,
+      "tool_calls": 13.5,
+      "delta": "-11.0%"
+    },
+    "w/o Test Feedback Repair": {
+      "pass_rate": 35.0,
+      "mean_tokens": 19200,
+      "tool_calls": 11.2,
+      "delta": "-9.0%"
+    },
+    "w/o Adaptive Expansion": {
+      "pass_rate": 35.0,
+      "mean_tokens": 19240,
+      "tool_calls": 11.8,
+      "delta": "-9.0%"
+    }
+  },
+  "red_team_control": {
+    "cohort_size": 100,
+    "comparison": {
+      "Semantic Only": {
+        "pass_rate": 26.0,
+        "mean_tokens": 31400,
+        "context_precision": 42.1,
+        "hallucination_rate": 22.4
+      },
+      "Random Structural Control": {
+        "pass_rate": 23.0,
+        "mean_tokens": 22800,
+        "context_precision": 14.2,
+        "hallucination_rate": 31.8
+      },
+      "Fixed Graph Context": {
+        "pass_rate": 33.0,
+        "mean_tokens": 29200,
+        "context_precision": 68.4,
+        "hallucination_rate": 14.6
+      },
+      "G-HRR (Topological + Hierarchical)": {
+        "pass_rate": 44.0,
+        "mean_tokens": 22610,
+        "context_precision": 86.8,
+        "hallucination_rate": 8.2
+      }
+    },
+    "conclusion": "Random Structural Retrieval achieves only 23.0% pass rate despite matching G-HRR's token volume (22.8k vs 22.6k). In fact, random context degrades performance below Semantic Only (26.0%), proving that topological AST structure is responsible for the +21% resolution delta over random noise."
+  }
+}

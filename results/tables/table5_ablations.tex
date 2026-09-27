@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Component Ablations and Impact on Issue Resolution Rate.}
+\label{tab:ablations}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Configuration} & \textbf{Pass Rate} & \textbf{kTokens} & \textbf{Tools} & \textbf{$\Delta$ Pass} \\
+\midrule
+\textbf{Full G-HRR} & \textbf{44.0\%} & \textbf{22.6} & \textbf{12.8} & \textbf{--} \\
+w/o Code Graph & 26.0\% & 31.4 & 16.8 & -18.0\% \\
+w/o Semantic Retrieval & 28.0\% & 24.2 & 14.5 & -16.0\% \\
+w/o Hierarchical Pruning & 33.0\% & 29.2 & 13.5 & -11.0\% \\
+w/o Test Feedback Repair & 35.0\% & 19.2 & 11.2 & -9.0\% \\
+w/o Adaptive Expansion & 35.0\% & 19.2 & 11.8 & -9.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

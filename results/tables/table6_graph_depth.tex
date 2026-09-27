@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Graph Depth Sweep Demonstrating Context Pollution at $d \ge 3$.}
+\label{tab:depth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Graph Depth} & \textbf{Pass Rate} & \textbf{R@5} & \textbf{Nodes} & \textbf{Noise (\%)} & \textbf{Pass/kTok} \\
+\midrule
+$d = 0$ (Target Only) & 27.0\% & 68.0\% & 1.0 & 6.0\% & 2.18 \\
+$d = 1$ (1-Hop AST) & 35.0\% & 88.0\% & 5.4 & 17.5\% & 1.82 \\
+$d = 2$ (2-Hop AST) & 33.0\% & 89.0\% & 18.2 & 52.0\% & 1.05 \\
+$d = 3$ (3-Hop AST) & 29.0\% & 84.0\% & 52.8 & 77.6\% & 0.60 \\
+$d = 4$ (4-Hop AST) & 24.0\% & 78.0\% & 128.0 & 90.2\% & 0.37 \\
+\textbf{Adaptive (G-HRR)} & \textbf{44.0\%} & \textbf{92.0\%} & \textbf{6.8} & \textbf{13.2\%} & \textbf{1.95} \\
+\bottomrule
+\end{tabular}
+\end{table}

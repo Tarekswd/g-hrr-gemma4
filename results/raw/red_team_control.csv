@@ -1,0 +1,5 @@
+configuration,pass_rate,mean_tokens,context_precision,hallucination_rate
+Semantic Only,26.0,31400,42.1,22.4
+Random Structural Control,23.0,22800,14.2,31.8
+Fixed Graph Context,33.0,29200,68.4,14.6
+G-HRR (Topological + Hierarchical),44.0,22610,86.8,8.2

@@ -1,0 +1,8 @@
+repository,language,loc,task_count,graph_nodes,graph_edges
+django/django,Python,"415,000",28,"48,200","142,500"
+sympy/sympy,Python,"1,120,000",24,"89,400","285,100"
+scikit-learn/scikit-learn,Python/C,"320,000",18,"31,800","94,200"
+matplotlib/matplotlib,Python/C++,"285,000",14,"26,100","78,900"
+pytest-dev/pytest,Python,"95,000",8,"12,400","38,400"
+astropy/astropy,Python/C,"380,000",5,"34,200","105,600"
+psf/requests,Python,"18,000",3,"2,100","5,800"

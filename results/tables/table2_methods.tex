@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Methodological Taxonomy of Evaluated Systems and Controls.}
+\label{tab:methods}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{System} & \textbf{Semantic} & \textbf{Code Graph} & \textbf{Hierarchy} & \textbf{Adaptive} & \textbf{Repair} & \textbf{Tokens (k)} \\
+\midrule
+B0: Direct Exploration & -- & -- & -- & -- & -- & 24.8 \\
+B1: Lexical (BM25) & Lexical & -- & -- & -- & -- & 26.5 \\
+B2: Dense Retrieval & Dense & -- & -- & -- & -- & 28.5 \\
+B3: Hybrid Search & Hybrid & -- & -- & -- & -- & 31.4 \\
+B4: Fixed Graph (1-Hop) & Hybrid & Fixed 1-Hop & -- & -- & -- & 29.2 \\
+B5: Hierarchical Only & Hybrid & -- & 4-Tier & -- & -- & 19.2 \\
+\textbf{B6: G-HRR (Full)} & \textbf{Hybrid} & \textbf{Adaptive AST} & \textbf{4-Tier} & \textbf{Yes} & \textbf{Yes} & \textbf{22.6} \\
+Control: Random Struct. & Hybrid & Permuted & 4-Tier & Matched & Yes & 22.8 \\
+\bottomrule
+\end{tabular}
+\end{table}

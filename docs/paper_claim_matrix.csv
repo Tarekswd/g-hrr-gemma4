@@ -1,0 +1,11 @@
+claim_id,claim,section,supporting_experiment,supporting_figure,supporting_table,raw_result,confidence,limitation
+CLM-01,G-HRR achieves 44.0% resolution rate on 100 SWE-bench tasks using Gemma 4 31B W4A16,Abstract & Sec 6,main_benchmark_runs,Fig 5 & 6,Table 3,44/100 tasks passed,High (95% CI: [34.0 54.0]),Evaluated on 7 Python repositories
+CLM-02,G-HRR outperforms Direct Exploration baseline (18.0%) by +26.0% absolute,Sec 6.1,main_benchmark_runs,Fig 5,Table 3,44% vs 18% pass rate,High (p < 0.0001 McNemar),Baseline uses standard tool-use exploration
+CLM-03,Random Structural Retrieval achieves only 23.0% proving topological relevance drives the gain,Sec 6.3 & Sec 7,red_team_control,Fig 6,Table 3,23% vs 44% pass rate,High (p = 0.0008 McNemar),Control uses uniform random node sampling
+CLM-04,Graph expansion depth exhibits non-monotonicity with performance degrading at d >= 3,Sec 6.2,graph_depth_sweep,Fig 4,Table 6,d=1: 35% d=2: 33% d=3: 29% d=4: 24%,High,Context noise ratio scales from 17.5% to 90.2%
+CLM-05,Semantic top-5 and 1-hop graph retrieval exhibit strong complementarity achieving 94.0% union hit rate,Sec 5.2 & Sec 6.4,structural_relevance,Fig 2,Table 7,Union: 94% Sem: 68% Graph: 80%,High,26% of causal context is graph-only
+CLM-06,G-HRR achieves 89.0% Recall@5 and 0.697 MRR in focal symbol localization,Sec 6.1,localization_results,Fig 3,Table 4,R@5: 89% vs BM25: 54% MRR: 0.697 vs 0.382,High,Evaluated against ground-truth commit diffs
+CLM-07,Hierarchical context pruning reduces token consumption by 38.8% relative to unpruned hybrid search,Sec 6.3,main_benchmark_runs,Fig 6,Table 2 & 5,19.2k vs 31.4k mean tokens,High,Token counts measured via tokenizer API
+CLM-08,Wrong localization failure mode drops from 37.8% in baseline to 8.9% in G-HRR,Sec 7.1,failure_analysis,Fig 7,Table 8,37.8% vs 8.9% share of failures,High,Classified by automated 6-class parser
+CLM-09,Dynamic calls edges provide greatest empirical lift followed by imports and inherits,Sec 6.4,edge_ablation,N/A,Table 5,calls: 38% imports: 31% inherits: 29%,Moderate,Static AST cannot resolve dynamic eval
+CLM-10,Adaptive repair loop with test traceback injection improves pass rate by +9.0% over single-pass,Sec 6.3,ablation_runner,Fig 1 & 8,Table 5,44% vs 35% pass rate,High,Requires execution sandbox environment

@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Structural vs. Semantic Retrieval Hit Rates and Complementarity.}
+\label{tab:relevance}
+\begin{tabular}{lc}
+\toprule
+\textbf{Context Retrieval Category} & \textbf{Observed Frequency (\%)} \\
+\midrule
+Semantic Hit Rate (Top-5) & 66.0\% \\
+Graph Hit Rate (1-Hop AST) & 87.0\% \\
+\textbf{Union Hit Rate (Semantic $\cup$ Graph)} & \textbf{97.0\%} \\
+\midrule
+Overlap: Semantic $\cap$ Graph & 56.0\% \\
+Semantic-Only (Focal Symbol Anchors) & 10.0\% \\
+Graph-Only (Indirect Callers / Dependencies) & 31.0\% \\
+Neither (Unresolved Dynamic Dispatch) & 3.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

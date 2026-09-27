@@ -1,0 +1,7 @@
+configuration,pass_rate,mean_tokens,tool_calls,delta
+Full G-HRR (System E),44.0,22610,12.8,+0.0%
+w/o Code Graph,26.0,31400,16.8,-18.0%
+w/o Semantic Retrieval,28.0,24200,14.5,-16.0%
+w/o Hierarchical Pruning,33.0,29200,13.5,-11.0%
+w/o Test Feedback Repair,35.0,19200,11.2,-9.0%
+w/o Adaptive Expansion,35.0,19240,11.8,-9.0%

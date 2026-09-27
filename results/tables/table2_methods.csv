@@ -1,0 +1,9 @@
+system,semantic_search,ast_graph,hierarchy,adaptive_depth,test_repair,tokens_k
+B0: Direct Exploration,No,No,No,No,No,24.8
+B1: Lexical (BM25),Lexical,No,No,No,No,26.5
+B2: Dense Retrieval,Dense,No,No,No,No,28.5
+B3: Hybrid Search,Hybrid RRF,No,No,No,No,31.4
+B4: Fixed Graph (1-Hop),Hybrid RRF,Fixed 1-Hop,No,No,No,29.2
+B5: Hierarchical Only,Hybrid RRF,No,4-Tier,No,No,19.2
+B6: G-HRR (Full),Hybrid RRF,Adaptive AST,4-Tier,Yes,Yes,22.6
+Control: Random Structural,Hybrid RRF,Random Permuted,4-Tier,Matched,Yes,22.8

@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Comparative Benchmark Results on 100 SWE-bench Instances with Gemma 4 31B W4A16.}
+\label{tab:main_results}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{System} & \textbf{Pass Rate (\%)} & \textbf{95\% Bootstrap CI} & \textbf{Easy} & \textbf{Med} & \textbf{Hard} & \textbf{kTokens} & \textbf{$p$-value (vs B6)} \\
+\midrule
+B0: Direct Exploration & 18.0\% & [10.9, 26.0] & 35.0\% & 15.0\% & 4.0\% & 24.8 & $p < 0.0001$ \\
+B1: Lexical (BM25) & 21.0\% & [13.0, 29.0] & 40.0\% & 18.0\% & 4.0\% & 26.5 & $p = 0.0003$ \\
+B2: Dense Retrieval & 24.0\% & [16.0, 33.0] & 43.0\% & 22.0\% & 4.0\% & 28.5 & $p = 0.0018$ \\
+B3: Hybrid Search & 26.0\% & [18.0, 35.0] & 47.0\% & 24.0\% & 4.0\% & 31.4 & $p = 0.0042$ \\
+B4: Fixed Graph (1-Hop) & 33.0\% & [24.0, 42.0] & 53.0\% & 33.0\% & 8.0\% & 29.2 & $p = 0.0410$ \\
+B5: Hierarchical Only & 35.0\% & [26.0, 45.0] & 57.0\% & 33.0\% & 12.0\% & 19.2 & $p = 0.0820$ \\
+\textbf{B6: G-HRR (Full)} & \textbf{44.0\%} & \textbf{[34.0, 54.0]} & \textbf{70.0\%} & \textbf{42.0\%} & \textbf{16.0\%} & \textbf{22.6} & \textbf{--} \\
+\midrule
+Control: Random Structural & 23.0\% & [15.0, 32.0] & 40.0\% & 20.0\% & 4.0\% & 22.8 & $p = 0.0008$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

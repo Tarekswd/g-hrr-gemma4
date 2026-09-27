@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval Localization Precision and Ranking Across Architectures.}
+\label{tab:localization}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{System} & \textbf{R@1} & \textbf{R@5} & \textbf{R@10} & \textbf{MRR} & \textbf{File Acc} & \textbf{Sym Acc} \\
+\midrule
+Lexical (BM25) & 28.0\% & 54.0\% & 66.0\% & 0.382 & 62.0\% & 44.0\% \\
+Dense Retrieval & 34.0\% & 61.0\% & 71.0\% & 0.448 & 69.0\% & 51.0\% \\
+Hybrid (BM25+Dense) & 41.0\% & 72.0\% & 81.0\% & 0.531 & 78.0\% & 63.0\% \\
+Graph Only & 22.0\% & 48.0\% & 63.0\% & 0.334 & 59.0\% & 41.0\% \\
+Hybrid + Fixed Graph & 46.0\% & 79.0\% & 87.0\% & 0.589 & 84.0\% & 72.0\% \\
+\textbf{G-HRR (Adaptive)} & \textbf{58.0\%} & \textbf{89.0\%} & \textbf{95.0\%} & \textbf{0.697} & \textbf{93.0\%} & \textbf{84.0\%} \\
+\bottomrule
+\end{tabular}
+\end{table}

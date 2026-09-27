@@ -1,0 +1,4074 @@
+[
+  {
+    "issue_id": "sympy__0001",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_1"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_1",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23040,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0002",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_2"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_2",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22429,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "astropy__0003",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_3"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_3",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25273,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0004",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_4"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_4",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 24102,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0005",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_5"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_5",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24836,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0006",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_6"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_6",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22225,
+    "graph_depth_used": 2,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "test_failure_location"
+      }
+    ],
+    "recovery_trigger": "test_failure_location",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0007",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_7"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_7",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 25391,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "matplotlib__0008",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_8"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_8",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22887,
+    "graph_depth_used": 2,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "test_failure_location"
+      }
+    ],
+    "recovery_trigger": "test_failure_location",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0009",
+    "repository": "astropy/astropy",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_9"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_9",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 22570,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0010",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_10"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_10",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20977,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "sympy__0011",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_11"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_11",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23728,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0012",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_12"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_12",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21041,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0013",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_13"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_13",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24940,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "sympy__0014",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_14"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_14",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24807,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "root_cause_failure"
+  },
+  {
+    "issue_id": "astropy__0015",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_15"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_15",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19451,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0016",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_16"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_16",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25641,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0017",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_17"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_17",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22448,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "scikit-learn__0018",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_18"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_18",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23965,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "astropy__0019",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_19"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_19",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21080,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "pytest__0020",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_20"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_20",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22910,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0021",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_21"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_21",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19477,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0022",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_22"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_22",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 25543,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0023",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_23"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_23",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24733,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "scikit-learn__0024",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_24"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_24",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23724,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "sympy__0025",
+    "repository": "sympy/sympy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_25"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_25",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23468,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "root_cause_failure"
+  },
+  {
+    "issue_id": "sympy__0026",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_26"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_26",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25476,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "pytest__0027",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_27"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_27",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23307,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "matplotlib__0028",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_28"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_28",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 20595,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0029",
+    "repository": "django/django",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_29"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_29",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22035,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "requests__0030",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_30"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_30",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22059,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "django__0031",
+    "repository": "django/django",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_31"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_31",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21661,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0032",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_32"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_32",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19242,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0033",
+    "repository": "django/django",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_33"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_33",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23728,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "sympy__0034",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_34"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_34",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19573,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "astropy__0035",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_35"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_35",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20859,
+    "graph_depth_used": 2,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0036",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_36"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_36",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22639,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "requests__0037",
+    "repository": "psf/requests",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_37"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_37",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19664,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "astropy__0038",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_38"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_38",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21879,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "matplotlib__0039",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_39"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_39",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22657,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "pytest__0040",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_40"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_40",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21804,
+    "graph_depth_used": 2,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0041",
+    "repository": "django/django",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_41"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_41",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20607,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "matplotlib__0042",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_42"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_42",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21645,
+    "graph_depth_used": 2,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "missing_dependency_expansion"
+      }
+    ],
+    "recovery_trigger": "missing_dependency_expansion",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0043",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_43"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_43",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22949,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "pytest__0044",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_44"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_44",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19616,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0045",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_45"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_45",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 24797,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "dependency_reasoning_failure"
+  },
+  {
+    "issue_id": "pytest__0046",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_46"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_46",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19017,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "scikit-learn__0047",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_47"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_47",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20869,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "pytest__0048",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_48"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_48",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23062,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "root_cause_failure"
+  },
+  {
+    "issue_id": "requests__0049",
+    "repository": "psf/requests",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_49"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_49",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 19299,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0050",
+    "repository": "django/django",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_50"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_50",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21770,
+    "graph_depth_used": 2,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0051",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_51"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_51",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22551,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "astropy__0052",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_52"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_52",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19944,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "django__0053",
+    "repository": "django/django",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_53"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_53",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21972,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0054",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_54"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_54",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25941,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0055",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_55"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_55",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21370,
+    "graph_depth_used": 2,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "test_failure_location"
+      }
+    ],
+    "recovery_trigger": "test_failure_location",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0056",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_56"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_56",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19422,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "dependency_reasoning_failure"
+  },
+  {
+    "issue_id": "scikit-learn__0057",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_57"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_57",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23944,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0058",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_58"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_58",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23324,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0059",
+    "repository": "astropy/astropy",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_59"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_59",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 23879,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "scikit-learn__0060",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_60"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_60",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19530,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0061",
+    "repository": "django/django",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_61"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_61",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 22371,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0062",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_62"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_62",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 19632,
+    "graph_depth_used": 2,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0063",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_63"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_63",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 25265,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0064",
+    "repository": "sympy/sympy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_64"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_64",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25407,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "matplotlib__0065",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_65"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_65",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form",
+      "matplotlib/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24057,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "django__0066",
+    "repository": "django/django",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_66"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_66",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21840,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "astropy__0067",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_67"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_67",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23215,
+    "graph_depth_used": 2,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "test_failure_location"
+      }
+    ],
+    "recovery_trigger": "test_failure_location",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "astropy__0068",
+    "repository": "astropy/astropy",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_68"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_68",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20690,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "scikit-learn__0069",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_69"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_69",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21612,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "pytest__0070",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_70"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_70",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21598,
+    "graph_depth_used": 2,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "missing_dependency_expansion"
+      }
+    ],
+    "recovery_trigger": "missing_dependency_expansion",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0071",
+    "repository": "psf/requests",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_71"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_71",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 20038,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0072",
+    "repository": "sympy/sympy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_72"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_72",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21875,
+    "graph_depth_used": 2,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0073",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_73"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_73",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25367,
+    "graph_depth_used": 2,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "missing_dependency_expansion"
+      }
+    ],
+    "recovery_trigger": "missing_dependency_expansion",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0074",
+    "repository": "django/django",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_74"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_74",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21796,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "requests__0075",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_75"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_75",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21405,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "astropy__0076",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_76"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_76",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 25768,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "root_cause_failure"
+  },
+  {
+    "issue_id": "scikit-learn__0077",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_77"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_77",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 25007,
+    "graph_depth_used": 2,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "stack_trace_caller"
+      }
+    ],
+    "recovery_trigger": "stack_trace_caller",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0078",
+    "repository": "psf/requests",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_78"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_78",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 20946,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "astropy__0079",
+    "repository": "astropy/astropy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "astropy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_79"
+    ],
+    "semantic_candidates": [
+      "astropy/models/fields.py:CharField.validate_79",
+      "astropy/models/fields.py:clean",
+      "astropy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "astropy/models/fields.py:BaseValidator",
+      "astropy/views/handler.py:process_form",
+      "astropy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22370,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "dependency_reasoning_failure"
+  },
+  {
+    "issue_id": "pytest__0080",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_80"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_80",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23592,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "pytest__0081",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_81"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_81",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22288,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "test_misunderstanding"
+  },
+  {
+    "issue_id": "sympy__0082",
+    "repository": "sympy/sympy",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_82"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_82",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 25399,
+    "graph_depth_used": 2,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "missing_dependency_expansion"
+      }
+    ],
+    "recovery_trigger": "missing_dependency_expansion",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "sympy__0083",
+    "repository": "sympy/sympy",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_83"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_83",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 20343,
+    "graph_depth_used": 1,
+    "tool_calls": 9,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0084",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_84"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_84",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21058,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "requests__0085",
+    "repository": "psf/requests",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_85"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_85",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21304,
+    "graph_depth_used": 1,
+    "tool_calls": 16,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "regression"
+  },
+  {
+    "issue_id": "sympy__0086",
+    "repository": "sympy/sympy",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_86"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_86",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21832,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "pytest__0087",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_87"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_87",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 24736,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0088",
+    "repository": "psf/requests",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_88"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_88",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22296,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "pytest__0089",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_89"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_89",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 23335,
+    "graph_depth_used": 1,
+    "tool_calls": 12,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0090",
+    "repository": "django/django",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_90"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_90",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22615,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "pytest__0091",
+    "repository": "pytest-dev/pytest",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "pytest/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_91"
+    ],
+    "semantic_candidates": [
+      "pytest/models/fields.py:CharField.validate_91",
+      "pytest/models/fields.py:clean",
+      "pytest/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "pytest/models/fields.py:BaseValidator",
+      "pytest/views/handler.py:process_form",
+      "pytest/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19038,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "wrong_localization"
+  },
+  {
+    "issue_id": "scikit-learn__0092",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_92"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_92",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 22571,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "matplotlib__0093",
+    "repository": "matplotlib/matplotlib",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "matplotlib/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_93"
+    ],
+    "semantic_candidates": [
+      "matplotlib/models/fields.py:CharField.validate_93",
+      "matplotlib/models/fields.py:clean",
+      "matplotlib/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "matplotlib/models/fields.py:BaseValidator",
+      "matplotlib/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 20641,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "django__0094",
+    "repository": "django/django",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_94"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_94",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 20664,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "missing_context"
+  },
+  {
+    "issue_id": "django__0095",
+    "repository": "django/django",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "django/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_95"
+    ],
+    "semantic_candidates": [
+      "django/models/fields.py:CharField.validate_95",
+      "django/models/fields.py:clean",
+      "django/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "django/models/fields.py:BaseValidator",
+      "django/views/handler.py:process_form",
+      "django/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 23603,
+    "graph_depth_used": 2,
+    "tool_calls": 12,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL (AssertionError in dependent caller)",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "graph_expanded_repair",
+        "test_result": "PASS",
+        "recovery_trigger": "test_failure_location"
+      }
+    ],
+    "recovery_trigger": "test_failure_location",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0096",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "medium",
+    "dependency_depth": 2,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_96"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_96",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form",
+      "scikit-learn/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 22802,
+    "graph_depth_used": 1,
+    "tool_calls": 14,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "requests__0097",
+    "repository": "psf/requests",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_97"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_97",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form",
+      "requests/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 21852,
+    "graph_depth_used": 1,
+    "tool_calls": 13,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "requests__0098",
+    "repository": "psf/requests",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "requests/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_98"
+    ],
+    "semantic_candidates": [
+      "requests/models/fields.py:CharField.validate_98",
+      "requests/models/fields.py:clean",
+      "requests/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "requests/models/fields.py:BaseValidator",
+      "requests/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 21155,
+    "graph_depth_used": 1,
+    "tool_calls": 10,
+    "initial_patch_passed": true,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "PASS",
+        "recovery_trigger": null
+      }
+    ],
+    "recovery_trigger": "first_try",
+    "final_success": true,
+    "failure_category": null
+  },
+  {
+    "issue_id": "scikit-learn__0099",
+    "repository": "scikit-learn/scikit-learn",
+    "difficulty": "easy",
+    "dependency_depth": 1,
+    "gold_files": [
+      "scikit-learn/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_99"
+    ],
+    "semantic_candidates": [
+      "scikit-learn/models/fields.py:CharField.validate_99",
+      "scikit-learn/models/fields.py:clean",
+      "scikit-learn/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "scikit-learn/models/fields.py:BaseValidator",
+      "scikit-learn/views/handler.py:process_form"
+    ],
+    "selected_context_tokens": 19804,
+    "graph_depth_used": 1,
+    "tool_calls": 11,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  },
+  {
+    "issue_id": "sympy__0100",
+    "repository": "sympy/sympy",
+    "difficulty": "hard",
+    "dependency_depth": 3,
+    "gold_files": [
+      "sympy/models/fields.py"
+    ],
+    "gold_symbols": [
+      "CharField.validate_100"
+    ],
+    "semantic_candidates": [
+      "sympy/models/fields.py:CharField.validate_100",
+      "sympy/models/fields.py:clean",
+      "sympy/utils.py:validate_input"
+    ],
+    "graph_candidates": [
+      "sympy/models/fields.py:BaseValidator",
+      "sympy/views/handler.py:process_form",
+      "sympy/core/dispatch.py:execute_hook"
+    ],
+    "selected_context_tokens": 19386,
+    "graph_depth_used": 1,
+    "tool_calls": 15,
+    "initial_patch_passed": false,
+    "repair_steps": [
+      {
+        "step": 1,
+        "action": "initial_patch",
+        "test_result": "FAIL",
+        "recovery_trigger": null
+      },
+      {
+        "step": 2,
+        "action": "repair_attempt",
+        "test_result": "FAIL",
+        "recovery_trigger": "exhausted_budget"
+      }
+    ],
+    "recovery_trigger": null,
+    "final_success": false,
+    "failure_category": "incomplete_patch"
+  }
+]

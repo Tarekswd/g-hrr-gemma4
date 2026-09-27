@@ -1,0 +1,6 @@
+edge_subset,pass_rate,context_recall,noise_ratio
+All Edges (G-HRR),44.0,92.0,12.4
+Calls Only,38.0,81.0,6.2
+Imports Only,31.0,67.0,18.5
+Inherits Only,29.0,62.0,5.1
+Contains Only,26.0,54.0,22.0

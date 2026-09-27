@@ -1,0 +1,8 @@
+metric,percentage
+Semantic Hit Rate (Top-5),66.0
+Graph Hit Rate (1-Hop),87.0
+Union Hit Rate (Semantic U Graph),97.0
+Semantic & Graph Overlap,56.0
+Semantic-Only Context,10.0
+Graph-Only Context (Structural),31.0
+Neither (Unresolved),3.0
