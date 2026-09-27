@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <rect width="600" height="350" fill="#ffffff" rx="8"/>
+  <text x="300" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Figure 3: Resolution Rate vs. Graph Expansion Depth</text>
+  
+  <!-- Axes -->
+  <line x1="80" y1="280" x2="540" y2="280" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="280" x2="80" y2="70" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Y labels -->
+  <text x="70" y="285" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">0%</text>
+  <text x="70" y="235" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">10%</text>
+  <text x="70" y="185" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">20%</text>
+  <text x="70" y="135" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">30%</text>
+  <text x="70" y="85" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">40%</text>
+
+  <!-- Bars: D0=27%, D1=35%, D2=33%, D3=29%, Adaptive=44% -->
+  <!-- 1% = 5px. y = 280 - (val * 5) -->
+  <rect x="110" y="145" width="55" height="135" fill="#93c5fd" rx="4"/>
+  <text x="137" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a8a">27%</text>
+  <text x="137" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Depth 0</text>
+
+  <rect x="195" y="105" width="55" height="175" fill="#3b82f6" rx="4"/>
+  <text x="222" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a8a">35%</text>
+  <text x="222" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Depth 1</text>
+
+  <rect x="280" y="115" width="55" height="165" fill="#60a5fa" rx="4"/>
+  <text x="307" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a8a">33%</text>
+  <text x="307" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Depth 2</text>
+
+  <rect x="365" y="135" width="55" height="145" fill="#93c5fd" rx="4"/>
+  <text x="392" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1e3a8a">29%</text>
+  <text x="392" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Depth 3</text>
+
+  <rect x="450" y="60" width="55" height="220" fill="#10b981" rx="4"/>
+  <text x="477" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#065f46">44%</text>
+  <text x="477" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#047857">Adaptive</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="900" height="450" fill="#f8fafc" rx="12"/>
+  <text x="450" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">Figure 1: Graph-Guided Hierarchical Repository Reasoning (G-HRR) Architecture</text>
+  
+  <!-- Boxes -->
+  <!-- Issue -->
+  <rect x="40" y="80" width="160" height="70" rx="8" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="120" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Issue Report</text>
+  <text x="120" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0">Problem Statement</text>
+
+  <!-- Arrow -->
+  <path d="M 200 115 L 240 115" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Hybrid Retrieval -->
+  <rect x="250" y="80" width="180" height="70" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Hybrid Seed Retrieval</text>
+  <text x="340" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748b">BM25 + Dense RRF (k=10)</text>
+
+  <!-- Arrow -->
+  <path d="M 430 115 L 470 115" stroke="#64748b" stroke-width="2.5"/>
+
+  <!-- AST Code Graph -->
+  <rect x="480" y="80" width="180" height="70" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">AST Graph Expander</text>
+  <text x="570" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3b82f6">1-Hop Caller/Callee Graph</text>
+
+  <!-- Arrow -->
+  <path d="M 660 115 L 700 115" stroke="#64748b" stroke-width="2.5"/>
+
+  <!-- Hierarchical Context -->
+  <rect x="710" y="80" width="150" height="70" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Hierarchical Filter</text>
+  <text x="785" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Smallest Sufficient Ctx</text>
+
+  <!-- Downward Arrow -->
+  <path d="M 785 150 L 785 220 L 710 220" stroke="#64748b" stroke-width="2.5"/>
+
+  <!-- Gemma 4 Model -->
+  <rect x="480" y="190" width="220" height="80" rx="8" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="590" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Gemma 4 31B W4A16</text>
+  <text x="590" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Local Reasoning &amp; Patch Gen</text>
+
+  <!-- Arrow to Test -->
+  <path d="M 480 230 L 400 230" stroke="#64748b" stroke-width="2.5"/>
+
+  <!-- Test Sandbox -->
+  <rect x="220" y="195" width="170" height="70" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Execution Sandbox</text>
+  <text x="305" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748b">pytest / unit validation</text>
+
+  <!-- Fork: Pass -> Submit, Fail -> Repair -->
+  <path d="M 220 230 L 160 230 L 160 320" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="80" y="320" width="160" height="60" rx="8" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="160" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Submit Patch [PASS]</text>
+
+  <path d="M 305 265 L 305 320" stroke="#dc2626" stroke-width="2.5"/>
+  <rect x="220" y="320" width="170" height="60" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Adaptive Repair Loop</text>
+  <text x="305" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748b">Traceback &amp; Depth 2 Fallback</text>
+  <!-- Loopback -->
+  <path d="M 390 350 L 590 350 L 590 270" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>

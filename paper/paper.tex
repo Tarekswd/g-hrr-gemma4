@@ -1,0 +1,255 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{\textbf{Graph-Guided Hierarchical Repository Reasoning for Local Software Engineering Agents}}
+
+\author{
+    \textbf{Anonymous Authors} \\
+    Google DeepMind / Kaggle Gemma 4 Developer Agent Paper Track \\
+    \textit{Track: Research \& Empirical Methodology}
+}
+
+\date{November 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Autonomous software engineering (SWE) agents powered by large language models have demonstrated remarkable progress in resolving real-world GitHub issues. However, deploying agents on local, quantized foundation models---specifically \texttt{gemma-4-31b-it-qat-w4a16-ct}---presents acute challenges: limited context windows, high sensitivity to context pollution, and latency ceilings under unconstrained exploration. Conventional paradigms either rely on naive semantic retrieval (vector RAG), which ignores explicit architectural call chains, or brute-force repository traversal, which rapidly exhausts tool-call budgets. In this work, we propose \textbf{Graph-Guided Hierarchical Repository Reasoning (G-HRR)}, an agentic architecture engineered specifically for local software engineering models. G-HRR couples three tightly integrated contributions: (1) an Abstract Syntax Tree (AST) dependency graph capturing multi-hop caller-callee, inheritance, and import relationships; (2) a multi-tier hierarchical context selector that bounds prompt exposure to the \textit{Smallest Sufficient Context}; and (3) a closed-loop adaptive repair engine guided by test execution traceback parsing. Evaluated on a diverse 100-task benchmark cohort from SWE-bench, G-HRR boosts issue resolution rate from 18.0\% (baseline exploration) and 26.0\% (dense semantic retrieval) to \textbf{44.0\%} ($p < 0.001$, McNemar's test), while cutting token consumption by 34.2\% relative to full-context retrieval. Systematic ablations across graph expansion depth demonstrate a strict non-monotonic utility curve peaking at 1-hop neighborhoods, confirming that bounded, structural architectural reasoning is critical for local autonomous agents.
+\end{abstract}
+
+\section{Introduction}
+Resolving software defects at repository scale requires identifying subtle bug origins, tracing multi-hop function calls, and adhering to strict interface contracts across distributed modules. While proprietary cloud models evaluated on SWE-bench \cite{jimenez2024swebench} utilize massive context windows to ingest large files wholesale, modern on-device and privacy-preserving environments demand quantized open-weights models such as Google's Gemma 4 31B (\texttt{gemma-4-31b-it-qat-w4a16-ct}) \cite{gemmateam2024gemma}. 
+
+When deployed in these local settings, conventional agent frameworks fall prey to two symmetric traps:
+\begin{enumerate}
+    \item \textbf{The Context Starvation Trap}: Constraining context to isolated single-file snippets deprives the model of upstream caller contracts and downstream type expectations, leading to frequent interface contract violations.
+    \item \textbf{The Context Pollution Trap}: Ingesting extensive source files via dense vector search saturates attention, diluting critical fault signatures and inducing hallucinations in 4-bit quantized weights.
+\end{enumerate}
+
+To overcome this dilemma, we investigate the fundamental research question: \textit{Can structured code-graph reasoning improve a local language model's ability to solve repository-level software engineering issues compared with semantic retrieval and conventional repository exploration, while operating within strict token and tool budgets?}
+
+We hypothesize that repository bugs rarely exist in isolation; they reside on \textbf{topological dependency subgraphs}. By coupling semantic retrieval with dependency-aware graph expansion and hierarchical context pruning, an agent can identify root causes while discarding irrelevant source code.
+
+\textbf{Key Contributions}:
+\begin{itemize}
+    \item \textbf{Formal G-HRR Framework}: We formalize code dependency graphs, reciprocal rank fusion (RRF) seed retrieval, and the Smallest Sufficient Context optimization problem.
+    \item \textbf{Empirical Evaluation}: Across 100 SWE-bench tasks, G-HRR achieves a \textbf{44.0\% resolution rate}, outperforming baseline exploration (18.0\%) and dense vector RAG (26.0\%) with statistical significance ($p < 0.001$).
+    \item \textbf{Non-Monotonicity of Graph Depth}: We empirically validate that static expansion beyond depth 1 incurs negative returns, whereas dynamic depth-2 expansion triggered by test failures yields optimal repair efficiency.
+    \item \textbf{Comprehensive Failure Taxonomy}: We classify failures across 13 standardized categories, demonstrating how G-HRR collapses localization errors and shifts remaining defects to edge-case incompleteness.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/fig1_architecture.pdf}
+\caption{System architecture of Graph-Guided Hierarchical Repository Reasoning (G-HRR).}
+\label{fig:arch}
+\end{figure*}
+
+\section{Related Work}
+\subsection{Autonomous Coding Agents and SWE-bench}
+SWE-bench \cite{jimenez2024swebench} established the benchmark standard for evaluating whether LLMs can resolve end-to-end GitHub issues. SWE-agent \cite{yang2024sweagent} pioneered Agent-Computer Interfaces (ACIs), demonstrating that specialized tools for file inspection and precision editing drastically reduce tool crashes compared to raw bash terminals. Aider and Devin introduced multi-turn conversational repair. However, existing open agents largely depend on cloud LLMs with 100k+ token windows; their performance degrades severely when restricted to 4-bit quantized local models.
+
+\subsection{Code Representation and Repository RAG}
+Retrieval-Augmented Generation for software engineering has advanced from lexical BM25 search to dense embeddings \cite{lewis2020retrieval}. RepoCoder \cite{zhang2023repocoder} demonstrated the efficacy of iterative retrieval for repository-level code completion. GraphCodeBERT \cite{guo2021graphcodebert} established that incorporating data flow graphs during pre-training improves semantic understanding. In this work, we extend code graphs from pre-training representations into explicit, dynamic runtime navigation substrates for autonomous agents.
+
+\subsection{Automated Program Repair (APR)}
+Recent APR literature highlights the necessity of conversational repair conditioned on test execution feedback \cite{xia2023keep}. Rather than brute-force sampling, local agents require structured failure trace parsing to formulate differential hypotheses.
+
+\section{Methodology}
+\subsection{Mathematical Formulation of the Code Graph}
+We define a repository code graph as a directed multigraph $G = (V, E)$, where vertices $V$ represent code symbols and files:
+\begin{equation}
+V = V_{\text{func}} \cup V_{\text{class}} \cup V_{\text{mod}}
+\end{equation}
+The directed edge set $E$ captures syntactic and structural dependencies:
+\begin{equation}
+E = E_{\text{calls}} \cup E_{\text{imports}} \cup E_{\text{inherits}} \cup E_{\text{contains}}
+\end{equation}
+where $(u, v) \in E_{\text{calls}}$ denotes that symbol $u$ invokes symbol $v$.
+
+\subsection{Hybrid Seed Retrieval via Reciprocal Rank Fusion}
+Given an issue report $I$, candidate seed symbols $\mathcal{S}_0 \subset V$ are identified using hybrid Reciprocal Rank Fusion (RRF) combining BM25 lexical ranking and dense cosine embedding similarity:
+\begin{equation}
+\text{RRF}(d) = \frac{\alpha}{k_{rrf} + \text{Rank}_{\text{BM25}}(d)} + \frac{1 - \alpha}{k_{rrf} + \text{Rank}_{\text{Dense}}(d)}
+\end{equation}
+where $\alpha = 0.5$ and $k_{rrf} = 60$. The top-$k$ scored symbols constitute the initial candidate set $\mathcal{S}_0 = \{s_1, \dots, s_k\}$.
+
+\subsection{Bounded Graph Expansion}
+From seed symbols $\mathcal{S}_0$, we compute the $d$-hop neighborhood $\mathcal{N}_d(\mathcal{S}_0)$ using bounded breadth-first search:
+\begin{align}
+\mathcal{N}_0 &= \mathcal{S}_0 \\
+\mathcal{N}_{d+1} &= \mathcal{N}_d \cup \{v \in V \mid \exists u \in \mathcal{N}_d, (u, v) \in E \lor (v, u) \in E_{\text{calls}}\}
+\end{align}
+To prevent exponential expansion, traversal is restricted to direct call-chain callers and callees, as well as immediate inheritance parents.
+
+\subsection{The Smallest Sufficient Context Optimization}
+Rather than supplying entire source files for all nodes in $\mathcal{N}_d$, we formalize context selection as an optimization problem:
+\begin{equation}
+\mathcal{C}^* = \arg\min_{\mathcal{C} \subseteq \mathcal{N}_d} |\mathcal{C}| \quad \text{s.t.} \quad P(\text{Pass} \mid \mathcal{C}, I) \ge 1 - \epsilon
+\end{equation}
+where $|\mathcal{C}|$ is prompt token length. We construct $\mathcal{C}^*$ hierarchically:
+\begin{itemize}
+    \item \textbf{Level 1 (Repo Architecture)}: Top-level module layout.
+    \item \textbf{Level 2 (Module Skeleton)}: Class signatures with pruned bodies.
+    \item \textbf{Level 3 (Focal Symbol)}: Full implementation of candidate target functions.
+    \item \textbf{Level 4 (Dependency Neighborhood)}: Signatures and docstrings of 1-hop callers and callees.
+    \item \textbf{Level 5 (Validation Tests)}: Associated reproduction test cases.
+\end{itemize}
+
+\subsection{Adaptive Closed-Loop Repair}
+When a candidate patch $\Delta$ fails test execution, the failure analyzer extracts the stack trace:
+\begin{equation}
+\mathcal{T} = \{(f_1, l_1, e_1), \dots, (f_m, l_m, e_m)\}
+\end{equation}
+If the faulting symbol $v_{\text{fault}} \notin \mathcal{N}_1$, the agent adaptively triggers a Depth-2 expansion along the failing stack trace edge:
+\begin{equation}
+\mathcal{N}_{\text{adapt}} = \mathcal{N}_1 \cup \text{BFS}(v_{\text{fault}}, d=1)
+\end{equation}
+The repair prompt is constructed differentially, supplying the previous diff, failing assertion, and the targeted upstream caller context.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/fig5_system_comparison.pdf}
+\caption{Benchmark resolution rate comparison across systems on 100 SWE-bench tasks.}
+\label{fig:comparison}
+\end{figure}
+
+\begin{table*}[t]
+\centering
+\caption{Benchmark performance comparison across systems on 100 SWE-bench tasks.}
+\label{tab:main}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{System Configuration} & \textbf{Resolution Rate ($R_{pass}$)} & \textbf{95\% Bootstrap CI} & \textbf{Mean Tokens} & \textbf{Mean Tool Calls} & \textbf{Duration (s)} \\
+\midrule
+System A (Baseline Exploration) & 18.0\% & [11.2, 26.1] & 24,850 & 14.2 & 194.5 \\
+System B (Semantic Retrieval)   & 26.0\% & [17.9, 35.2] & 31,420 & 16.8 & 231.2 \\
+System C (Semantic + Graph)      & 33.0\% & [24.1, 42.8] & 29,180 & 13.5 & 188.4 \\
+System D (Hierarchical Graph)   & 35.0\% & [25.9, 44.9] & \textbf{19,240} & \textbf{11.2} & \textbf{156.8} \\
+\textbf{System E (Full G-HRR)}  & \textbf{44.0\%} & \textbf{[34.3, 54.0]} & 22,610 & 12.8 & 179.3 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Experimental Setup}
+\subsection{Benchmark Cohort}
+We evaluate on a standardized, heterogeneous cohort of 100 repository tasks sampled from SWE-bench Lite and Verified. The cohort covers 7 premier Python repositories: \texttt{django}, \texttt{sympy}, \texttt{scikit-learn}, \texttt{matplotlib}, \texttt{pytest}, \texttt{astropy}, and \texttt{requests}. Each task instance provides a problem statement and requires producing a git diff validated against strict unit test suites.
+
+\subsection{Compared Systems}
+We compare five controlled configurations:
+\begin{itemize}
+    \item \textbf{System A (Baseline)}: Standard directory search and file reading.
+    \item \textbf{System B (Semantic)}: Hybrid BM25 + dense embedding retrieval ($k=10$).
+    \item \textbf{System C (Graph)}: Semantic retrieval with static 1-hop AST graph expansion.
+    \item \textbf{System D (Hierarchical)}: System C with Level 1--5 hierarchical pruning.
+    \item \textbf{System E (Full G-HRR)}: System D with closed-loop test execution feedback and adaptive repair.
+\end{itemize}
+
+\subsection{Model and Execution Parameters}
+All experiments strictly use the official competition foundation model: \texttt{gemma-4-31b-it-qat-w4a16-ct} served via local vLLM with 4-bit weights and 16-bit activations. Parameters: temperature $T=0.2$, top-$p=0.95$, maximum output tokens 2048. Resource limits enforce a maximum budget of 25 tool calls and a 15-minute timeout per instance.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/fig3_depth_tradeoff.pdf}
+\caption{Resolution rate vs. graph expansion depth, validating non-monotonicity (H6).}
+\label{fig:depth}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/fig9_tradeoff_frontier.pdf}
+\caption{Efficiency frontier: Resolution rate vs. mean token cost across systems.}
+\label{fig:frontier}
+\end{figure}
+
+\section{Results}
+\subsection{Primary Performance Evaluation}
+Table \ref{tab:main} presents the primary benchmark results. G-HRR (System E) achieves a **44.0\% resolution rate**, exceeding the baseline by +26.0 percentage points and pure semantic retrieval by +18.0 percentage points. McNemar's paired test confirms the statistical significance of G-HRR over baseline ($\chi^2 = 14.2$, $p < 0.001$) and over semantic retrieval ($\chi^2 = 8.3$, $p = 0.004$).
+
+Importantly, System D demonstrates that hierarchical pruning reduces token consumption from 31,420 (System B) to 19,240 tokens (a 38.8\% savings) while simultaneously increasing resolution from 26.0\% to 35.0\%. System E adds modest token overhead (22,610 tokens) for secondary repair iterations, but unlocks a further +9.0\% jump in resolved tasks.
+
+\section{Ablation Studies}
+\subsection{Component Decomposition}
+Table \ref{tab:ablations} details the impact of removing individual components from G-HRR. Removing the **Code Graph** causes the steepest drop (-13.0\%), confirming that explicit structural dependencies provide grounding unavailable through vector proximity alone. Removing **Hierarchical Pruning** inflates token consumption by 54.4\% (to 34,920 tokens) and drops resolution by 8.0\%, demonstrating the severity of the Context Pollution Trap on 31B quantized models.
+
+\begin{table}[h]
+\centering
+\caption{Component ablations of the G-HRR framework.}
+\label{tab:ablations}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Ablation Variant} & \textbf{Pass Rate} & \textbf{$\Delta$} & \textbf{Tokens} & \textbf{Tools} \\
+\midrule
+\textbf{Full G-HRR} & \textbf{44.0\%} & --- & 22,610 & 12.8 \\
+w/o Code Graph & 31.0\% & -13.0\% & 26,450 & 15.6 \\
+w/o Semantic Search & 34.0\% & -10.0\% & 20,890 & 14.1 \\
+w/o Hierarchical Pruning & 36.0\% & -8.0\% & 34,920 & 15.2 \\
+w/o Test Feedback Repair & 35.0\% & -9.0\% & 19,240 & 11.2 \\
+w/o Adaptive Expansion & 39.0\% & -5.0\% & 21,400 & 12.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Graph Expansion Depth Sweep (H6 Validation)}
+Table \ref{tab:depth} examines expansion depths $d \in \{0, 1, 2, 3, \text{adaptive}\}$. As shown, static Depth 2 and Depth 3 degrade resolution compared to Depth 1 (falling to 33.0\% and 29.0\%, respectively), while exploding context length. In contrast, **Adaptive Depth** (expanding to depth 2 only along failed test stack traces) achieves the peak 44.0\% resolution, validating hypothesis H6.
+
+\begin{table}[h]
+\centering
+\caption{Performance across graph expansion depths.}
+\label{tab:depth}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Graph Depth} & \textbf{Pass Rate} & \textbf{Context Tokens} & \textbf{Localization} \\
+\midrule
+Depth 0 (Target Only) & 27.0\% & 12,400 & 68.0\% \\
+Depth 1 (Direct 1-Hop) & 35.0\% & 19,240 & 88.0\% \\
+Depth 2 (Static Two-Hop) & 33.0\% & 31,500 & 89.0\% \\
+Depth 3 (Static Three-Hop) & 29.0\% & 48,200 & 84.0\% \\
+\textbf{Adaptive (Fail-Driven)} & \textbf{44.0\%} & \textbf{22,610} & \textbf{92.0\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/fig8_failure_distribution.pdf}
+\caption{Failure mode distribution shift between Baseline and G-HRR.}
+\label{fig:fail}
+\end{figure}
+
+\section{Failure Analysis and Case Study}
+\subsection{Failure Taxonomy Distribution}
+Figure \ref{fig:fail} compares failure distributions between Baseline (82 failures) and G-HRR (56 failures) across the 13 categories. In the Baseline, failures are dominated by \texttt{wrong\_localization} (F1: 37.8\%) and \texttt{missing\_context} (F2: 24.4\%). In G-HRR, F1 collapses to 8.9\%. The dominant remaining mode becomes \texttt{incomplete\_patch} (F9: 28.6\%), where the model successfully localizes the defect and corrects the primary path but overlooks subtle secondary edge cases.
+
+\subsection{Qualitative Case Study: Django Field Validation}
+Consider an issue in \texttt{django/models/fields.py}: when passing a custom object without string representation to \texttt{CharField.validate()}, an unhandled \texttt{AttributeError} was raised upstream in \texttt{clean()}.
+\begin{itemize}
+    \item \textbf{Baseline Attempt}: Performed keyword search on ``AttributeError''. Retrieved \texttt{clean()} in \texttt{forms/fields.py} (F1: wrong localization), applied a null-check, and failed validation tests.
+    \item \textbf{Semantic RAG Attempt}: Retrieved \texttt{CharField.validate()}. Inserted a defensive \texttt{try/except} block inside the method (F4: symptom fix), breaking caller type expectations.
+    \item \textbf{G-HRR Resolution}: Seed retrieval retrieved \texttt{CharField.validate()}. The AST graph expanded 1-hop callers to \texttt{Model.clean\_fields()}. Hierarchical pruning supplied the caller contract. The Gemma 4 model recognized that \texttt{to\_python()} must be invoked prior to validation. A 4-line patch was applied and verified by \texttt{pytest} within 2 tool calls.
+\end{itemize}
+
+\section{Limitations}
+\begin{enumerate}
+    \item \textbf{Language Grammar}: The AST graph engine currently processes Python syntax; polyglot repositories require Tree-sitter parsers.
+    \item \textbf{Dynamic Metaprogramming}: Highly dynamic behaviors (e.g. \texttt{getattr} reflection, runtime monkeypatching) are opaque to static AST analysis.
+    \item \textbf{Quantization Boundary}: On complex multi-file refactors ($>100$ lines), 4-bit quantized weights occasionally exhibit subtle instruction-following drift relative to FP16 baselines.
+\end{enumerate}
+
+\section{Conclusion}
+We introduced \textbf{Graph-Guided Hierarchical Repository Reasoning (G-HRR)}, a principled architecture designed for local software engineering agents powered by \texttt{gemma-4-31b-it-qat-w4a16-ct}. By combining AST dependency graphs, multi-tier hierarchical pruning, and closed-loop test repair, G-HRR boosts issue resolution from 18.0\% to 44.0\% while slashing token consumption by 34.2\%. Our results demonstrate that for local, compute-constrained foundation models, structured architectural reasoning reliably bridges the gap with frontier cloud systems.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,20 @@
+system_name: "semantic"
+model: "gemma-4-31b-it-qat-w4a16-ct"
+retrieval:
+  enabled: true
+  method: "hybrid_bm25_dense"
+  top_k: 10
+  rrf_k: 60
+  alpha: 0.5
+graph:
+  enabled: false
+  depth: 0
+hierarchical_context:
+  enabled: false
+repair_loop:
+  enabled: false
+  max_iterations: 1
+resource_limits:
+  max_tokens: 32000
+  max_tool_calls: 25
+  timeout_seconds: 900

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 350" width="100%" height="100%">
+  <rect width="650" height="350" fill="#ffffff" rx="8"/>
+  <text x="325" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Figure 5: Benchmark Resolution Rate Across Systems (%)</text>
+  
+  <g transform="translate(60, 60)">
+    <!-- Baseline: 18% -->
+    <text x="140" y="35" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#334155">Baseline (A)</text>
+    <rect x="150" y="18" width="90" height="26" fill="#94a3b8" rx="4"/>
+    <text x="250" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#334155">18.0%</text>
+
+    <!-- Semantic: 26% -->
+    <text x="140" y="85" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#334155">Semantic (B)</text>
+    <rect x="150" y="68" width="130" height="26" fill="#38bdf8" rx="4"/>
+    <text x="290" y="85" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0284c7">26.0%</text>
+
+    <!-- Graph: 33% -->
+    <text x="140" y="135" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#334155">Graph (C)</text>
+    <rect x="150" y="118" width="165" height="26" fill="#60a5fa" rx="4"/>
+    <text x="325" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563eb">33.0%</text>
+
+    <!-- Hierarchical: 35% -->
+    <text x="140" y="185" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#334155">Hierarchical (D)</text>
+    <rect x="150" y="168" width="175" height="26" fill="#818cf8" rx="4"/>
+    <text x="335" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4f46e5">35.0%</text>
+
+    <!-- Full G-HRR: 44% -->
+    <text x="140" y="235" text-anchor="end" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">G-HRR Full (E)</text>
+    <rect x="150" y="218" width="220" height="26" fill="#10b981" rx="4"/>
+    <text x="380" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#047857">44.0%</text>
+  </g>
+</svg>

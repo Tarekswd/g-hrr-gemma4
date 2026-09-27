@@ -1,0 +1,24 @@
+system_name: "adaptive_full"
+model: "gemma-4-31b-it-qat-w4a16-ct"
+retrieval:
+  enabled: true
+  method: "hybrid_bm25_dense"
+  top_k: 10
+graph:
+  enabled: true
+  depth: "adaptive"
+  base_depth: 1
+  failure_depth: 2
+hierarchical_context:
+  enabled: true
+  levels: [1, 2, 3, 4, 5]
+  prune_irrelevant_bodies: true
+  token_budget: 16000
+repair_loop:
+  enabled: true
+  max_iterations: 3
+  test_driven_retrieval: true
+resource_limits:
+  max_tokens: 32000
+  max_tool_calls: 25
+  timeout_seconds: 900
