@@ -8,6 +8,8 @@
 
 Official research implementation and paper for the **Google DeepMind / Kaggle Gemma 4 Developer Agent Paper Track** (Target Venue: NeurIPS 2026 Expo).
 
+> **Notice**: This repository is an empirical research project for the **Gemma 4 Developer Agent Paper Track**. It investigates Graph-Guided Hierarchical Repository Reasoning for local software-engineering agents. **This repository is NOT the main competition submission.**
+
 📄 **Read the Full Paper**: [`paper/paper.pdf`](paper/paper.pdf) | [Markdown Version](paper/paper.md)
 
 ---
