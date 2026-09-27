@@ -1,6 +1,6 @@
 # Graph-Guided Hierarchical Repository Reasoning for Local Software Engineering Agents
 
-**Authors**: Anonymous Submission (Gemma 4 Developer Agent Paper Track)  
+**Author**: Tarek Ahmadieh  
 **Target Venue**: Google DeepMind / Kaggle Gemma 4 Developer Agent Paper Track (NeurIPS 2026 Expo)
 
 ---

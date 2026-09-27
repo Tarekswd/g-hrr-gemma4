@@ -151,9 +151,9 @@ python scripts/generate_all_figures.py
 If you find this work or codebase helpful in your research, please cite:
 
 ```bibtex
-@inproceedings{ghrr2026gemma4,
+@inproceedings{ahmadieh2026ghrr,
   title     = {Graph-Guided Hierarchical Repository Reasoning for Local Software Engineering Agents},
-  author    = {Anonymous},
+  author    = {Tarek Ahmadieh},
   booktitle = {Google DeepMind / Kaggle Gemma 4 Developer Agent Paper Track (NeurIPS Expo)},
   year      = {2026}
 }
